@@ -93,6 +93,62 @@ for (int i = 1; i <= 10; i++){
 }
 System.out.println();
 
+// Methods
+//takes two ints, return their sum
+static int add(int a, int b){
+    return a + b;
+}
+//takes a double, return its square
+static double square(double n){
+    return n*n;
+}        
+//void function: perform an action, returns nothing
+static void greet(String name){
+    System.out.println("Hello," + name + "!Welcome to Java.")
+}
+//Recursive function call itself with a smaller problem
+static int factorial (int n){
+    if (n<=1){
+        return 1;
+    }
+    return n *factorial(n-1);
+}
+
+// Overload functions: 
+static int multiply(int a, int b){
+    return a * b;
+}
+static double multiply(double a, double b){
+    return a * b;
+}
+    
+// Default parameter: if caller doesn't provide it, 10 is used
+static in power (int base, int exponent){
+    int result = 1;
+    for (int i = 0; i < exponent; i++){
+        result *= base;
+    }
+    return result;
+}
+static int power(int base){
+    return power(base, 2);
+}
+
+// Main Function
+int sum = add (5,7);
+System.out.println("5 + 7 =" + sum);
+
+double sq = square(4.5);
+System.out.println("4.5 squared =" + sq);
+
+greet("Maria");
+System.out.println("5! =" + factorial(5));
+System.out.println("multiply(2,3) =" + multiply(2,3));
+System.out.println("multiply(2.5,4.0) =" + multiply(2.5,4.0));
+System.out.println("power(5)" + power(5));
+System.out.println("power(5,3)" + power(5,3));
+    
 scanner.close();
     }
 }
+ 
