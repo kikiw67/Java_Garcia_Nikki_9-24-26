@@ -151,4 +151,22 @@ System.out.println("power(5,3)" + power(5,3));
 scanner.close();
     }
 }
- 
+
+// INTRO CARD
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[]args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your name? ");
+        String name = scanner.nextline();
+
+        System.out.println("What is your age? ");
+        int age = Integer.parseInt(scanner.nextline());
+
+        System.out.println("\n-------INTRO CARD-------");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("In 5 years, " + name + "will be" + (age + 5) + " year old.");
+    }
+}
